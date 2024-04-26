@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TF-IDF</title>
+</head>
+<body>
+    <h1>TF-IDF</h1>
+
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".txt" required>
+        <button type="submit">Загрузить</button>
+    </form>
+
+    <br>
+
+    {% if is_table %}
+        {{ table|safe }}
+    {% else %}
+        <p>Нет данных для отображения.</p>
+    {% endif %}
+
+</body>
+</html>
